@@ -31,18 +31,18 @@ preferences {
         }
         section("Add a Camera") {
         	input("CameraStreamPathList","enum", title: "Camera Stream Path", description: "Please enter your camera's streaming path", required:false, submitOnChange: true,
-            options: [ //add your camera urls here
-            ["rtsp://user:password@[ipaddress]/Streaming/Channels/1":"Name of Camera"], //hikvision
-            ["http://[ipaddress]:[port]/mjpeg.cgi?user=user&password=password&channel=1.mjpeg":"Name of Camera"], //dlink 932l
-            ["http://user:password@[ipaddress]/nphMotionJpeg?Resolution=640x480&Quality=Standard":"Name of Camera"] //panasonic bl-140c
+            options: [ //alert.logitech.com
+            ["rtsp://vampvegan644@gmail.com:0000d@[192.168.7.94]/Streaming/Channels/1":"Name of Camera"], //Camera-700e
+            ["http://[192.168.7.94]:[80]/mjpeg.cgi?vampvegan644@gmail.com&0000=password&channel=1.mjpeg":"Name of Camera"], //Camera-700e
+            ["http://vampvegan644@gmail.com@[192.168.7.94]/nphMotionJpeg?Resolution=640x480&Quality=Standard":"Name of Camera"] //Logitech Alert(tm) 700e
             ], displayDuringSetup: true)
-        
-            
+
+
             	input("CameraStreamPathCustom","string", title: "Camera Stream Path", description: "Please enter your camera's streaming path", defaultValue: settings?.CameraStreamPathList, required:false, displayDuringSetup: true)
-        
+
             }
     }
-    
+
 }
 
 def installed() {
